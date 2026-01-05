@@ -1,0 +1,298 @@
+/* --- VARIÁVEIS DE CORES --- */
+:root {
+    /* Cores de Fundo Escuras */
+    --fundo-principal: #3A0CA3;
+    --fundo-secundario: #3F37C9;
+    --fundo-escuro: #240046;
+
+    /* Cores de Acento (Neon) */
+    --acento-ciano: #4CC9F0;
+    --acento-rosa: #F72585;
+    --acento-roxo-claro: #B5179E;
+    --acento-roxo-medio: #7209B7;
+    
+    /* Texto */
+    --texto-claro: #ffffff;
+    --texto-cinza: #e0e0e0;
+}
+
+/* --- RESET GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, var(--fundo-principal), var(--fundo-secundario), var(--acento-roxo-medio));
+    color: var(--texto-claro);
+    overflow-x: hidden;
+}
+
+/* --- UTILITÁRIOS --- */
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-secao {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(to right, var(--acento-ciano), var(--acento-rosa));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.destaque-rosa { color: var(--acento-rosa); }
+.destaque-ciano { color: var(--acento-ciano); }
+
+.botao-neon {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--acento-ciano);
+    color: var(--acento-ciano);
+    background: transparent;
+    box-shadow: 0 0 10px rgba(76, 201, 240, 0.2);
+}
+
+.botao-neon:hover {
+    background: var(--acento-ciano);
+    color: var(--fundo-principal);
+    box-shadow: 0 0 20px rgba(76, 201, 240, 0.6);
+    transform: translateY(-3px);
+}
+
+/* --- CABEÇALHO --- */
+.cabecalho-principal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    background: rgba(58, 12, 163, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.cabecalho-principal.fixo {
+    padding: 15px 0;
+    background: rgba(36, 0, 70, 0.95); /* Fundo mais escuro ao rolar */
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--acento-ciano);
+}
+
+.links-navegacao {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.links-navegacao a {
+    text-decoration: none;
+    color: var(--texto-claro);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.links-navegacao a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--acento-rosa);
+    transition: width 0.3s;
+}
+
+.links-navegacao a:hover::after {
+    width: 100%;
+}
+
+/* --- HERO SECTION --- */
+.secao-hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    position: relative;
+}
+
+.conteudo-hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.conteudo-hero p {
+    font-size: 1.2rem;
+    color: var(--texto-cinza);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fundo-tech-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(76, 201, 240, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(247, 37, 133, 0.1) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* --- SEÇÕES GERAIS --- */
+section {
+    padding: 100px 0;
+}
+
+/* --- SOBRE MIM --- */
+.secao-sobre {
+    background: rgba(0,0,0,0.2);
+}
+
+.flex-sobre {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.texto-sobre {
+    flex: 2;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--texto-cinza);
+}
+
+.stats-sobre {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cartao-stat {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid var(--acento-rosa);
+    text-align: center;
+}
+
+.cartao-stat h3 { font-size: 2rem; color: var(--acento-ciano); }
+.cartao-stat p { font-size: 0.9rem; }
+
+/* --- HABILIDADES (SKILLS) --- */
+.grade-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.cartao-habilidade {
+    background: rgba(0, 0, 0, 0.3); /* Fundo um pouco mais escuro */
+    padding: 30px 20px;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* AQUI ESTÁ A CORREÇÃO DO ÍCONE (Glow Roxo) */
+.cartao-habilidade i {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #ffffff; /* Ícone Branco Sólido */
+    text-shadow: 
+        0 0 10px var(--acento-roxo-medio), 
+        0 0 20px var(--acento-roxo-claro); /* Brilho Roxo */
+    transition: all 0.4s ease;
+}
+
+.cartao-habilidade h4 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Efeito Hover Geral do Card */
+.cartao-habilidade:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 25px rgba(181, 23, 158, 0.4);
+    border-color: var(--acento-rosa);
+}
+
+/* Efeito Hover do Ícone (Vira Ciano) */
+.cartao-habilidade:hover i {
+    color: #ffffff;
+    text-shadow: 
+        0 0 15px var(--acento-ciano), 
+        0 0 30px var(--acento-ciano),
+        0 0 45px var(--acento-ciano);
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* Destaque para o card de Automação */
+.cartao-habilidade.automacao {
+    border: 1px solid rgba(76, 201, 240, 0.3);
+}
+
+.cartao-habilidade.automacao:hover {
+     box-shadow: 0 0 25px rgba(76, 201, 240, 0.5);
+     border-color: var(--acento-ciano);
+}
+
+/* --- RODAPÉ --- */
+.rodape-principal {
+    padding: 50px 0;
+    text-align: center;
+    background: var(--fundo-escuro);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.links-sociais a {
+    font-size: 2rem;
+    color: var(--texto-claro);
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.links-sociais a:hover {
+    color: var(--acento-rosa);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .conteudo-hero h1 { font-size: 2.5rem; }
+    .links-navegacao { display: none; }
+    .flex-sobre { flex-direction: column; }
+}
