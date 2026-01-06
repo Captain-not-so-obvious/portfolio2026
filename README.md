@@ -65,7 +65,12 @@ Este portfólio serve como vitrine para:
 
 Se você gostou do meu trabalho ou quer trocar uma ideia sobre automação e desenvolvimento:
 
-<a href="https://www.linkedin.com/in/fillipe-moreira-33aa83180/" target="_blank"><img src="https://www.google.com/search?q=https://img.shields.io/badge/-LinkedIn-%25230077B5%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" target="_blank"></a> <a href="mailto:fillipemoreira979@gmail.com" target="_blank"><img src="https://www.google.com/search?q=https://img.shields.io/badge/-Email-%2523D14836%3Fstyle%3Dfor-the-badge%26logo%3Dgmail%26logoColor%3Dwhite" target="_blank"></a>
+<a href="https://www.linkedin.com/in/fillipe-moreira-33aa83180/" target="_blank" rel="noopener noreferrer">
+  <img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="mailto:fillipemoreira979@gmail.com" target="_blank" rel="noopener noreferrer">
+  <img alt="Email" src="https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
 
 ---
 
