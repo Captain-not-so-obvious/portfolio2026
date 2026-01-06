@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Nome | Full Stack & Automação</title>
+    <title>Fillipe Moreira | Full Stack & Automação</title>
     
     <link rel="stylesheet" href="style.css">
 
@@ -116,9 +116,58 @@
     <section id="projetos" style="background: rgba(0,0,0,0.2);">
         <div class="conteiner">
             <h2 class="titulo-secao" data-aos="fade-up">Projetos em Destaque</h2>
-            <p style="text-align: center; color: var(--texto-cinza);" data-aos="fade-up">Em breve: seus projetos incríveis de Full Stack e Automação aqui.</p>
-            <div style="height: 200px; display: flex; justify-content: center; align-items: center; border: 2px dashed var(--acento-roxo-claro); margin-top: 30px; border-radius: 20px; opacity: 0.5;">
-                <span style="color: var(--acento-ciano)">[Espaço reservado para Projetos]</span>
+            <p style="text-align: center; color: var(--texto-cinza); margin-bottom: 50px;" data-aos="fade-up">
+                Soluções reais desenvolvidas para otimizar processos e resolver problemas.
+            </p>
+            
+            <div class="grade-projetos">
+                
+                <div class="cartao-projeto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cabecalho-projeto">
+                        <i class='bx bx-support icone-projeto'></i>
+                        <h3>Chamaí</h3>
+                    </div>
+                    <p class="descricao-projeto">
+                        Sistema completo de gestão de chamados (Ticketing). Centraliza solicitações de suporte de TI, permitindo acompanhamento de status, lançamento de histórico para documentação de resolução de problemas, priorização e relatórios de atendimento, atendimento por máquinas, SLA e performance dos colaboradores. Além disso, o sistema dispara e-mails transacionais para notificar os solicitantes das atualizações nos chamados.
+                    </p>
+                    <div class="tags-projeto">
+                        <span class="tag-tech">React</span>
+                        <span class="tag-tech">Node.js</span>
+                        <span class="tag-tech">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="cartao-projeto" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cabecalho-projeto">
+                        <i class='bx bxs-bot icone-projeto'></i>
+                        <h3>Autbuy</h3>
+                    </div>
+                    <p class="descricao-projeto">
+                        Robô de automação para o setor de compras. O sistema recebe a listagem de estoque e vendas e com base nisso e nos critérios definidos pelo usuário, sugere a quantidade a ser comprada, aguardando aprovação do analista de compras antes de fazer o envio da cotação. Após receber os dados de estoque e vendas, salva em um banco para aplicar machine learning e melhorar a precisão das compras.
+                    </p>
+                    <div class="tags-projeto">
+                        <span class="tag-tech">N8N</span>
+                        <span class="tag-tech">Automação</span>
+                        <span class="tag-tech">Banco de Dados</span>
+                    </div>
+                </div>
+
+                <div class="cartao-projeto destaque-borda" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cabecalho-projeto">
+                        <i class='bx bx-list-check icone-projeto'></i>
+                        <h3>Checklist Inteligente</h3>
+                    </div>
+                    <p class="descricao-projeto">
+                        Sistema de validação diária de balanças com tolerância de peso automática. O diferencial é o <strong>fluxo no N8N</strong> que monitora o preenchimento: dispara alertas (Email) às 07:30 se pendente, e escala para a gerência às 08:00. Caso o ususário não faça o checklist durante o dia de trabalho, o sistema preenche como 'não realizado' para auditoria posteriormente.
+                    </p>
+                    <div class="tags-projeto">
+                        <span class="tag-tech">N8N</span>
+                        <span class="tag-tech">JavaScript</span>
+                        <span class="tag-tech">Webhooks</span>
+                        <span class="tag-tech">Formulários</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

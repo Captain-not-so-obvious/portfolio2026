@@ -271,6 +271,111 @@ section {
      border-color: var(--acento-ciano);
 }
 
+/* --- ESTILOS DA SEÇÃO DE PROJETOS --- */
+
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.cartao-projeto {
+    background: rgba(36, 0, 70, 0.6); /* Fundo bem escuro */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartao-projeto:hover {
+    transform: translateY(-10px);
+    border-color: var(--acento-ciano);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Header do Card (Ícone + Título) */
+.cabecalho-projeto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icone-projeto {
+    font-size: 2.5rem;
+    color: var(--acento-rosa);
+    /* Glow suave no ícone */
+    text-shadow: 0 0 10px rgba(247, 37, 133, 0.5);
+}
+
+.cartao-projeto h3 {
+    font-size: 1.5rem;
+    color: var(--texto-claro);
+}
+
+/* Descrição */
+.descricao-projeto {
+    color: var(--texto-cinza);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Empurra o conteúdo abaixo para o fundo */
+}
+
+/* Tags de Tecnologia (Pílulas) */
+.tags-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tag-tech {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--acento-ciano);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--acento-ciano);
+    transition: all 0.3s;
+}
+
+.cartao-projeto:hover .tag-tech {
+    background: var(--acento-ciano);
+    color: var(--fundo-principal);
+}
+
+/* Links (Botões do rodapé do card) */
+.links-projeto {
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.link-repo, .link-demo {
+    text-decoration: none;
+    color: var(--texto-claro);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.link-repo:hover, .link-demo:hover {
+    color: var(--acento-rosa);
+}
+
+/* Classe especial para destacar o projeto de N8N se quiser */
+.destaque-borda {
+    border: 1px solid rgba(181, 23, 158, 0.5); /* Borda roxa sutil */
+}
+
 /* --- RODAPÉ --- */
 .rodape-principal {
     padding: 50px 0;
@@ -289,6 +394,8 @@ section {
 .links-sociais a:hover {
     color: var(--acento-rosa);
 }
+
+
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
